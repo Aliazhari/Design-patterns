@@ -16,7 +16,7 @@ Implements the algorithm using the __Strategy interface__
 
 It is configured with a __ConcreteStrategy__ object and maintains a reference to a Strategy object\.
 
-When to use Strategy Pattern
+### When to use Strategy Pattern
 
 Use the Strategy pattern when:
 
