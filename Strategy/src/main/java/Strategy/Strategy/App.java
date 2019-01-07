@@ -38,16 +38,10 @@ public class App
          System.out.println("20 / 2 = " + context.executeStrategy(20, 0));
          }
          catch (Exception ex) {
-        	 System.out.println(ex);
+        	 System.out.println("20 / 0 = " + ex);
          }
          
-         int[] a = {1, 3, 2 };
-         int[] b = {1, 2, 3 };
-         System.out.println(Arrays.equals(a, b));
-         
-         for(int i = 0; i < 21; i++)
-         System.out.println(i + " : " + fb(i));
-         
+  
        
     }
 }
