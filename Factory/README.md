@@ -1,31 +1,36 @@
-# Strategy Design Pattern
+# Factory Design Pattern
 
-Sometimes in your application you have similar objects with different algorithms/behaviors and you want to have the flexibility to select the behavior dynamically at run time\.
+Definition from Book: “Factory method defines an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.”\.
 
 ## Participants in Pattern
 
-### Strategy
+### Product
 
-It declares an __interface__ common to all undelaying supported algorithms
+- defines the interface of objects the factory method creates.
 
-### Concrete Strategy
+### ConcreteProduct
 
-Implements the algorithm using the __Strategy interface__
+- implements the Product interface.
 
-### Context \(Composition\)
+### Creator
 
-It is configured with a __ConcreteStrategy__ object and maintains a reference to a Strategy object\.
+- It declares the factory method, which returns an object of type Product\.
+Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object\.
+- It may call the factory method to create a Product object\.
 
-### When to use Strategy Pattern
+### ConcreteCreator
 
-Use the Strategy pattern when:
+- overrides the factory method to return an instance of a ConcreteProduct\.
 
-- You have many classes that differ only in their behavior\.
-- You have different variants of an algorithm or functionality\.
-- You want to avoid exposing complex, algorithm\-specific data structures to clients\. An Algorithm uses data that you want to hide it from client\.
-- You have a class that defines many behaviors and these have multiple conditional statements in its operations\.
+### When to use Factory Pattern
+
+Use the Factory pattern when:
+
+- a class can't anticipate the class of objects it must create\.
+- a class wants its subclasses to specify the objects it creates\.
+- classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate\.
 
 UML Class Diagram:
 
- ![alt text](StrategyUMLClassDiagram.png "Class Model")
+ ![alt text](FactoryUml.gif "Class Model")
 
